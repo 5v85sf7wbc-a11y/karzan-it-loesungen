@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KarZaN IT-Lösungen</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#172033}
+header{background:#101d38;color:white;text-align:center;padding:30px 16px}
+header h1{margin:8px 0;color:#ff9b36;font-size:30px}
+header p{margin:8px}
+button,.btn{border:0;border-radius:10px;padding:12px 16px;font-size:16px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.lang{background:#fff;color:#14213d;margin:4px}
+main{max-width:650px;margin:22px auto;padding:0 14px}
+.card{background:white;padding:20px;margin-bottom:16px;border-radius:16px;box-shadow:0 3px 12px #0000000d}
+h2{color:#14213d;margin-top:0}
+.service{padding:13px 0;border-bottom:1px solid #e5e7eb;display:flex;justify-content:space-between;gap:12px}
+.service:last-child{border:0}
+.price{color:#e97816;font-weight:bold;white-space:nowrap}
+.btn{background:#16a34a;color:white;text-align:center;width:100%;margin:5px 0}
+.call{background:#14213d}
+footer{text-align:center;padding:20px;color:#5b6474;font-size:14px}
+[dir=rtl]{text-align:right}
+</style>
+</head>
+<body>
+<header>
+  <div style="font-size:38px">💻</div>
+  <h1>KarZaN IT-Lösungen</h1>
+  <p id="tagline">Ihr zuverlässiger IT-Service in Krefeld</p>
+  <button class="lang" onclick="setLang('de')">Deutsch</button>
+  <button class="lang" onclick="setLang('ku')">کوردی</button>
+</header>
+
+<main>
+  <section class="card">
+    <h2 id="serviceTitle">Unsere Dienstleistungen</h2>
+    <div class="service"><span id="s1">Fehlerdiagnose</span><span class="price" id="p1">KOSTENLOS</span></div>
+    <div class="service"><span id="s2">Betriebssystem-Installation (inkl. Treiber & Updates)</span><span class="price">99,- €</span></div>
+    <div class="service"><span id="s3">Virenentfernung & Bereinigung</span><span class="price">79,- €</span></div>
+    <div class="service"><span id="s4">Installation aller Programme</span><span class="price">49,- €</span></div>
+    <div class="service"><span id="s5">Software-Fehlerbehebung</span><span class="price" id="p5">ab 29,- €</span></div>
+  </section>
+
+  <section class="card">
+    <h2 id="contactTitle">Kontaktieren Sie mich</h2>
+    <a class="btn" id="wa" href="https://wa.me/491782239982" target="_blank">WhatsApp kontaktieren</a>
+    <a class="btn call" href="tel:+491782239982" id="call">📞 +49 178 223 9982 – Anrufen</a>
+    <p>✉️ <a href="mailto:karzanaram.M@web.de">karzanaram.M@web.de</a></p>
+    <p>📍 Krefeld, Deutschland</p>
+  </section>
+</main>
+
+<footer>© KarZaN IT-Lösungen</footer>
+
+<script>
+function setLang(lang){
+ const ku=lang==='ku';
+ document.documentElement.lang=ku?'ku':'de';
+ document.documentElement.dir=ku?'rtl':'ltr';
+ document.getElementById('tagline').textContent=ku?'خزمەتگوزاریی متمانەپێکراوی کۆمپیوتەر لە Krefeld':'Ihr zuverlässiger IT-Service in Krefeld';
+ document.getElementById('serviceTitle').textContent=ku?'خزمەتگوزارییەکانمان':'Unsere Dienstleistungen';
+ document.getElementById('s1').textContent=ku?'پشکنینی کێشەی کۆمپیوتەر':'Fehlerdiagnose';
+ document.getElementById('s2').textContent=ku?'دامەزراندنی سیستەمی کارکردن (لەگەڵ Driver و نوێکردنەوە)':'Betriebssystem-Installation (inkl. Treiber & Updates)';
+ document.getElementById('s3').textContent=ku?'لابردنی ڤایرۆس و پاککردنەوە':'Virenentfernung & Bereinigung';
+ document.getElementById('s4').textContent=ku?'دامەزراندنی هەموو بەرنامەکان':'Installation aller Programme';
+ document.getElementById('s5').textContent=ku?'چارەسەرکردنی کێشەی نەرمەکاڵا':'Software-Fehlerbehebung';
+ document.getElementById('p1').textContent=ku?'بەخۆڕایی':'KOSTENLOS';
+ document.getElementById('p5').textContent=ku?'لە 29 یۆرۆوە':'ab 29,- €';
+ document.getElementById('contactTitle').textContent=ku?'پەیوەندیم پێوە بکە':'Kontaktieren Sie mich';
+ document.getElementById('wa').textContent=ku?'پەیوەندی لە WhatsApp':'WhatsApp kontaktieren';
+ document.getElementById('call').textContent=ku?'📞 +49 178 223 9982 – تەلەفۆن بکە':'📞 +49 178 223 9982 – Anrufen';
+}
+</script>
+</body>
+</html>
